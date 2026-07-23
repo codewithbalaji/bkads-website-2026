@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T00:00:00Z",
+  "title": "Design System: BKADS",
+  "extensions": {
+    "colorMeta": {
+      "ink-black": { "role": "neutral", "displayName": "Ink Black", "canonical": "oklch(0.145 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "off-white": { "role": "neutral", "displayName": "Off-White", "canonical": "oklch(0.985 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "surface-raised": { "role": "neutral", "displayName": "Surface Raised", "canonical": "oklch(0.205 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "pale-silver": { "role": "primary", "displayName": "Pale Silver", "canonical": "oklch(0.922 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "oklch(0.269 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "muted-silver": { "role": "neutral", "displayName": "Muted Silver", "canonical": "oklch(0.708 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "hairline-white": { "role": "neutral", "displayName": "Hairline White", "canonical": "oklch(1 0 0 / 10%)", "tonalRamp": ["oklch(1 0 0 / 10%)"] },
+      "input-white": { "role": "neutral", "displayName": "Input White", "canonical": "oklch(1 0 0 / 15%)", "tonalRamp": ["oklch(1 0 0 / 15%)"] },
+      "focus-ring": { "role": "neutral", "displayName": "Focus Ring", "canonical": "oklch(0.556 0 0)", "tonalRamp": ["oklch(0.145 0 0)", "oklch(0.205 0 0)", "oklch(0.269 0 0)", "oklch(0.371 0 0)", "oklch(0.439 0 0)", "oklch(0.556 0 0)", "oklch(0.708 0 0)", "oklch(0.87 0 0)", "oklch(0.922 0 0)", "oklch(0.985 0 0)"] },
+      "destructive-red": { "role": "system", "displayName": "Destructive Red", "canonical": "oklch(0.704 0.191 22.216)", "tonalRamp": ["oklch(0.704 0.191 22.216)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The bold closing line of the hero heading (\"For Modern Businesses\"). Steps down across breakpoints; never a fixed size." },
+      "leadIn": { "displayName": "Lead-in", "purpose": "The thin italic line preceding the Display line (\"Your Technology Partner\"). Own block row, own breakpoint steps." },
+      "body": { "displayName": "Body", "purpose": "Not yet rendered anywhere in shipped UI — all body-copy sections are still empty stubs. Documented as the planned default." },
+      "label": { "displayName": "Label", "purpose": "Navbar links and button text." }
+    },
+    "shadows": [
+      { "name": "glass-float", "value": "0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -4px rgba(0,0,0,0.4)", "purpose": "Paired with backdrop-blur-xl + border-white/10 + bg-white/5 for floating UI (navbar pill, future glass CTA banners). Never used alone." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Tailwind's default transition timing, used by button transition-all and nav-link transition-colors." },
+      { "name": "duration-standard", "value": "150ms", "purpose": "Tailwind's default transition duration, used throughout buttons and nav links." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-intent marketing CTA. Used for the hero's \"Book a Free Strategy Call\" at the lg size.",
+      "html": "<button class=\"ds-btn-primary\">Book a Free Strategy Call</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 3rem; padding: 0 1.5rem; border-radius: 0.875rem; border: 1px solid transparent; background-color: var(--primary); color: var(--primary-foreground); font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 500; white-space: nowrap; cursor: pointer; transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { background-color: color-mix(in oklch, var(--primary) 80%, transparent); } .ds-btn-primary:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary/lower-intent CTA. Used for the hero's \"Explore Services\" at the lg size.",
+      "html": "<button class=\"ds-btn-outline\">Explore Services</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 3rem; padding: 0 1.5rem; border-radius: 0.875rem; border: 1px solid var(--border); background-color: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 500; white-space: nowrap; cursor: pointer; transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-outline:hover { background-color: var(--muted); color: var(--foreground); } .ds-btn-outline:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); } .ds-btn-outline:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Nav CTA Button",
+      "kind": "button",
+      "refersTo": "button-nav-cta",
+      "description": "Compact primary-variant button used only in the navbar (\"Contact\"), at default size with a px-5 padding override.",
+      "html": "<button class=\"ds-btn-nav-cta\">Contact</button>",
+      "css": ".ds-btn-nav-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2rem; padding: 0 1.25rem; border-radius: 0.625rem; border: 1px solid transparent; background-color: var(--primary); color: var(--primary-foreground); font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; cursor: pointer; transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-nav-cta:hover { background-color: color-mix(in oklch, var(--primary) 80%, transparent); }"
+    },
+    {
+      "name": "Navbar",
+      "kind": "nav",
+      "refersTo": "nav-glass-pill",
+      "description": "Fixed, floating glass pill. Grid keeps 5 links centered regardless of logo/CTA width. No mobile hamburger yet.",
+      "html": "<header class=\"ds-nav-shell\"><div class=\"ds-nav-logo\">BKads</div><nav class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link\">Home</a><a href=\"#\" class=\"ds-nav-link\">Services</a><a href=\"#\" class=\"ds-nav-link\">Case Studies</a><a href=\"#\" class=\"ds-nav-link\">About</a><a href=\"#\" class=\"ds-nav-link\">Blog</a></nav><button class=\"ds-btn-nav-cta\">Contact</button></header>",
+      "css": ".ds-nav-shell { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; max-width: 64rem; margin: 0 auto; padding: 0.75rem 1.5rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.1); background-color: rgba(255,255,255,0.05); backdrop-filter: blur(24px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -4px rgba(0,0,0,0.4); } .ds-nav-logo { font-weight: 600; color: var(--foreground); } .ds-nav-links { display: flex; justify-content: center; gap: 2rem; font-size: 0.875rem; font-weight: 500; } .ds-nav-link { color: color-mix(in oklch, var(--foreground) 80%, transparent); text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-nav-link:hover { color: var(--foreground); } .ds-btn-nav-cta { display: inline-flex; align-items: center; justify-content: center; height: 2rem; padding: 0 1.25rem; border-radius: 0.625rem; background-color: var(--primary); color: var(--primary-foreground); font-size: 0.875rem; font-weight: 500; white-space: nowrap; }"
+    },
+    {
+      "name": "Glass Floating Surface",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature reusable surface for any UI that must float legibly over imagery or the WebGL hero — not a default card/section background.",
+      "html": "<div class=\"ds-glass-surface\">Floating content</div>",
+      "css": ".ds-glass-surface { border: 1px solid rgba(255,255,255,0.1); background-color: rgba(255,255,255,0.05); backdrop-filter: blur(24px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -4px rgba(0,0,0,0.4); border-radius: 0.875rem; padding: 1.5rem; color: var(--foreground); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Signal",
+    "overview": "A calm, confident technical presence on a dark field. The palette is fully desaturated — every surface, from the near-black page background to the lightest button fill, sits at chroma 0 in OKLCH — so the only variables left to carry personality are weight, scale, and motion. The hero's WebGL noise terrain drifts slowly behind the type instead of demanding attention, and the thin italic lead-in (\"Your Technology Partner\") softens the bold grotesk closing line (\"For Modern Businesses\") that follows it. Nothing shouts; the confidence is in the restraint. Buttons and floating surfaces read as restrained and functional — flat by default, glass only where it earns its keep (floating over imagery), never as decoration on ordinary content.",
+    "keyCharacteristics": [
+      "Fully monochrome (zero chroma) palette; any brand hue is a deliberate, not-yet-made decision.",
+      "Two-weight type drama: font-thin italic lead-ins against font-semibold display closes, on one shared sans (Geist).",
+      "Flat-by-default surfaces; glass/blur reserved for UI that floats over imagery or the WebGL hero.",
+      "Generous, breakpoint-aware type scale — display type steps down at each breakpoint rather than holding one fixed size."
+    ],
+    "rules": [
+      { "name": "The Monochrome Rule", "body": "No brand hue (no lime, no sky-blue) is in use today. If one is introduced later, add it as new tokens — never repurpose or retint one of the neutrals above.", "section": "colors" },
+      { "name": "The Wired Font Rule", "body": "--font-sans in app/globals.css must resolve to var(--font-geist-sans). A prior edit briefly redefined it as the self-referential var(--font-sans) — invalid CSS that silently fell back to the browser's default serif site-wide, with no console error. Never let --font-sans reference itself.", "section": "typography" },
+      { "name": "The Five-Link Rule", "body": "At md (768px), the navbar's 1fr middle column has room for five links at gap-8 before flex-shrink starts wrapping a multi-word label mid-row. Keep the primary nav at five items or fewer, or revisit the layout before adding a sixth.", "section": "layout" },
+      { "name": "The Glass-Is-Not-Decoration Rule", "body": "border-white/10 bg-white/5 backdrop-blur-xl shadow-lg is reserved for UI that must float legibly over imagery or the WebGL terrain (navbar, hero CTA context). Don't reach for it as a default card or section-background treatment.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the palette fully desaturated (chroma 0). If a brand hue is introduced later, add it as new tokens — never retint an existing neutral.",
+      "Do give any hero-scale heading breakpoint steps (text-4xl → text-7xl, not one fixed size) — a fixed text-7xl overflowed the viewport at mobile widths before this was fixed.",
+      "Do reserve the lg button size for high-visibility marketing CTAs (hero, future banners) and default/smaller sizes for denser UI controls like the navbar CTA.",
+      "Do reserve the glass treatment for UI floating over imagery/WebGL (navbar, hero-adjacent banners), per the Glass-Is-Not-Decoration Rule.",
+      "Do keep the primary nav at five links or fewer at the md breakpoint, per the Five-Link Rule."
+    ],
+    "donts": [
+      "Don't redefine --font-sans as var(--font-sans) (self-referential) — always var(--font-geist-sans). See the Wired Font Rule; this exact regression happened once and silently broke every heading and button's typeface with no error.",
+      "Don't trust dark:-prefixed Tailwind utilities inside shared components (e.g. button.tsx's outline variant still carries dark:border-input dark:bg-input/30 dark:hover:bg-input/50). This project defines no .dark class and no @custom-variant dark override, so those utilities resolve to the OS-level prefers-color-scheme: dark media query — meaning a visitor with a light OS preference sees different button styling than one with dark, silently contradicting this system's own \"no prefers-color-scheme branching\" principle. Treat existing dark: classes in shared components as inert leftovers, not active theming, until someone either removes them or wires up a proper @custom-variant dark override.",
+      "Don't use size=\"sm\"/tight padding for a CTA that sits next to a visually taller neighbor (e.g. a 40px logo) — the mismatch reads as an afterthought, not a deliberate hierarchy choice.",
+      "Don't grow the primary nav-link list past five items without revisiting the layout first (see the Five-Link Rule)."
+    ]
+  }
+}
