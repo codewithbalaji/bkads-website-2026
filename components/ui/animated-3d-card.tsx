@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -98,7 +98,7 @@ const containerVariants = {
       ease: [0.23, 1, 0.32, 1],
     },
   },
-};
+} satisfies Variants;
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40, rotateX: -15, scale: 0.95 },
@@ -109,7 +109,7 @@ const itemVariants = {
     scale: 1,
     transition: { type: "spring", stiffness: 100, damping: 12, mass: 0.7 },
   },
-};
+} satisfies Variants;
 
 const Card3D = React.forwardRef<HTMLDivElement, Card3DProps>(
   (

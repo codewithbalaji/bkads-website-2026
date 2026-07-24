@@ -2,13 +2,25 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize = 256, speed = 0.5 }) => {
-  const canvasRef = useRef(null);
-  const containerRef = useRef(null);
+interface GLSLHillsProps {
+  width?: string;
+  height?: string;
+  cameraZ?: number;
+  planeSize?: number;
+  speed?: number;
+}
+
+const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize = 256, speed = 0.5 }: GLSLHillsProps) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Plane class
     class Plane {
+      uniforms: { time: { type: string; value: number } };
+      mesh: THREE.Mesh;
+      time: number;
+
       constructor() {
         this.uniforms = {
           time: { type: 'f', value: 0 },
@@ -17,7 +29,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         this.time = speed;
       }
 
-      createMesh() {
+      createMesh(): THREE.Mesh {
         return new THREE.Mesh(
           new THREE.PlaneGeometry(planeSize, planeSize, planeSize, planeSize),
           new THREE.RawShaderMaterial({
@@ -146,13 +158,13 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         );
       }
 
-      render(time) {
+      render(time: number) {
         this.uniforms.time.value += time * this.time;
       }
     }
 
     // Three.js setup
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: false });
+    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current!, antialias: false });
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
     const clock = new THREE.Clock();
@@ -160,6 +172,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
 
     const resize = () => {
       const canvas = canvasRef.current;
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       camera.aspect = window.innerWidth / window.innerHeight;
