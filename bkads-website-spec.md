@@ -9,7 +9,7 @@
 |---|---|---|
 | **Homepage** (`/`) | First impression + conversion hub | Highest traffic page, builds trust, directs to services |
 | **Services** (`/services`) | Overview of all offerings | Hub page linking to individual service pages |
-| **Service Sub-pages** (`/services/ai-automation`, `/services/website-development`, `/services/app-development`, `/services/software-development`, `/services/seo-digital-marketing`, `/services/ecommerce-development`) | Deep-dive per service | Money pages — target specific buyer-intent keywords |
+| **Service Sub-pages** (`/services/ai-automation`, `/services/website-development`, `/services/app-development`, `/services/software-development`, `/services/seo-digital-marketing`) | Deep-dive per service | Money pages — target specific buyer-intent keywords |
 | **Case Studies / Portfolio** (`/case-studies`) | Proof of results | Builds trust, reduces buyer hesitation, ranks for "[industry] results" |
 | **About Us** (`/about`) | Humanizes the brand | Builds credibility, supports local/brand search |
 | **Blog / Resources** (`/blog`) | Long-term organic traffic engine | Captures top-of-funnel searches, builds authority (E-E-A-T) |
@@ -75,7 +75,6 @@ Use this exact list across the site — Services page, homepage overview, nav dr
 | **App Development** | `/services/app-development` | "mobile app development company," "iOS/Android app developers" |
 | **Software Development** | `/services/software-development` | "custom software development," "SaaS development company" |
 | **SEO & Digital Marketing** | `/services/seo-digital-marketing` | "SEO agency," "digital marketing agency" |
-| **E-Commerce Development** | `/services/ecommerce-development` | "e-commerce website development," "Shopify/WooCommerce development agency" |
 
 **Note on positioning:** Bkads is a **full-stack digital & tech partner** (build + grow), not a pure ad agency. Messaging across Hero, Why Choose Us, and Services Overview should reflect this breadth — e.g., *"We build your digital presence and grow it"* rather than only *"We run your ads."* This also means:
 - **Case studies** should be tagged/filterable by service type (AI Automation, Web Dev, App Dev, Software Dev, SEO/Marketing, E-commerce) so visitors can find relevant proof fast.

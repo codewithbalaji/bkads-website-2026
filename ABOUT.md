@@ -58,8 +58,6 @@ Custom business software, internal tools, dashboards, portals, and integrations 
 ### SEO & Digital Marketing
 Search engine optimization, digital marketing campaigns, content, and analytics that grow online visibility and generate leads.
 
-### E-Commerce Development
-Online stores and e-commerce platforms with product catalogs, payments, order management, and integrations.
 
 ## Unique Value Proposition
 BKADS combines modern software development, AI expertise, and business-focused problem solving to deliver practical solutions that help companies achieve measurable results.
