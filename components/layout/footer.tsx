@@ -1,7 +1,7 @@
+import { FlickeringFooter } from "@/components/ui/flickering-footer";
+
 const Footer = () => {
-  return (
-    <div>footer</div>
-  )
-}
+  return <FlickeringFooter />;
+};
 
 export default Footer
