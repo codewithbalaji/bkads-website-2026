@@ -1,0 +1,32 @@
+[
+  {
+    "id": "services",
+    "question": "What services does BKADS offer?",
+    "answer": "We deliver AI automation, website design and development, app and software development, SEO and digital marketing, and e-commerce solutions — matched to whatever will move the needle for your business."
+  },
+  {
+    "id": "location",
+    "question": "Where is BKADS based?",
+    "answer": "We're based in Ambattur, Chennai, Tamil Nadu, and work with clients across India and remotely."
+  },
+  {
+    "id": "who-we-work-with",
+    "question": "Do you work with small and medium businesses?",
+    "answer": "Yes. We work with small and medium businesses, manufacturing companies, and organizations going through digital transformation."
+  },
+  {
+    "id": "engagement",
+    "question": "How does a typical engagement work?",
+    "answer": "We move through discovery and strategy, planning and architecture, design and development, QA, and launch with ongoing support — offered as fixed-price projects, consulting engagements, or retainers."
+  },
+  {
+    "id": "support",
+    "question": "Do you provide ongoing support after launch?",
+    "answer": "Yes. Through maintenance contracts and support retainers, we keep things running smoothly and extend and evolve the solution as your business grows."
+  },
+  {
+    "id": "get-started",
+    "question": "How do I get started?",
+    "answer": "Book a free strategy call and we'll talk through your goals, then scope the right mix of solutions to get you there."
+  }
+]
