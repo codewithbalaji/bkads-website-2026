@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getAllCaseStudies } from "@/lib/case-studies";
+import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -25,5 +26,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...caseStudyRoutes];
+  const posts = await getAllPosts();
+  const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...caseStudyRoutes, ...blogRoutes];
 }
