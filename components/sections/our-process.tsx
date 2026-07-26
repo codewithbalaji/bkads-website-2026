@@ -1,4 +1,5 @@
 import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
+import { Reveal } from "@/components/ui/reveal"
 
 const PROCESS_PHASES = [
   {
@@ -37,7 +38,7 @@ const OurProcess = () => {
   return (
     <section className="relative bg-background py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 md:gap-12 xl:gap-16">
-        <div className="md:sticky md:top-0 md:flex md:h-svh md:flex-col md:justify-center md:py-12">
+        <Reveal className="md:sticky md:top-0 md:flex md:h-svh md:flex-col md:justify-center md:py-12">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             <span className="block text-2xl font-thin tracking-normal italic sm:text-3xl md:text-4xl">
               Our Process
@@ -50,7 +51,7 @@ const OurProcess = () => {
             and the outcomes you want to achieve. This phase sets the stage
             for everything that follows.
           </p>
-        </div>
+        </Reveal>
 
         <ContainerScroll
           className="space-y-8 py-12"

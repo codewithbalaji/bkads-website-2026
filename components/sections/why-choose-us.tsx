@@ -1,4 +1,5 @@
 import { Bot, HeartHandshake, Layers, Target, type LucideIcon } from "lucide-react";
+import { Reveal, StaggerReveal, RevealItem } from "@/components/ui/reveal";
 
 const REASONS: {
   id: string;
@@ -40,7 +41,7 @@ const WhyChooseUs = () => {
   return (
     <section className="relative bg-background py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 md:gap-12 xl:gap-16">
-        <div className="md:sticky md:top-24 md:self-start">
+        <Reveal className="md:sticky md:top-24 md:self-start">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             <span className="block text-2xl font-thin tracking-normal italic sm:text-3xl md:text-4xl">
               Why Choose Us
@@ -53,11 +54,11 @@ const WhyChooseUs = () => {
             measurable results — treating every client&apos;s challenge as our
             own.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="space-y-8">
+        <StaggerReveal className="space-y-8">
           {REASONS.map((reason) => (
-            <div key={reason.id} className="flex gap-4">
+            <RevealItem key={reason.id} className="flex gap-4">
               <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-card text-foreground">
                 <reason.icon className="size-5" />
               </div>
@@ -69,9 +70,9 @@ const WhyChooseUs = () => {
                   {reason.description}
                 </p>
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </StaggerReveal>
       </div>
     </section>
   );

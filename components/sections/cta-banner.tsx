@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/ui/reveal";
 
 const CtaBanner = () => {
   return (
     <section className="relative bg-background py-24 md:py-32">
-      <div className="mx-auto max-w-5xl px-6">
+      <Reveal className="mx-auto max-w-5xl px-6">
         <div className="rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-lg backdrop-blur-xl md:p-16">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             <span className="block text-2xl font-thin tracking-normal italic sm:text-3xl md:text-4xl">
@@ -28,7 +29,7 @@ const CtaBanner = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
