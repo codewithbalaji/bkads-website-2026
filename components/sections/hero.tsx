@@ -18,7 +18,7 @@ export default function Hero() {
             variant="default"
             size="lg"
             nativeButton={false}
-            render={<Link href="#contact" />}
+            render={<Link href="/contact" />}
           >
             Book a Free Strategy Call
           </Button>
@@ -26,7 +26,7 @@ export default function Hero() {
             variant="outline"
             size="lg"
             nativeButton={false}
-            render={<Link href="#services" />}
+            render={<Link href="/services" />}
           >
             Explore Services
           </Button>

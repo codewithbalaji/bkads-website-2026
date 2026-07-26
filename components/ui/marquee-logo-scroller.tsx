@@ -82,14 +82,19 @@ const MarqueeLogoScroller = React.forwardRef<HTMLDivElement, MarqueeLogoScroller
               {[...half, ...half].map((logo, index) => (
                 <div
                   key={index}
-                  className="relative h-24 w-40 shrink-0 flex items-center justify-center rounded-lg bg-foreground overflow-hidden transition-transform duration-300 ease-out hover:scale-105"
+                  className="group relative isolate h-24 w-40 shrink-0 flex items-center justify-center rounded-lg bg-secondary overflow-hidden transition-transform duration-300 ease-out hover:scale-105"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     fill
                     sizes="160px"
-                    className="object-contain p-3"
+                    className="object-contain p-3 transition-all duration-300"
+                  />
+                  {/* Duotone sheen: tints the grayscale logo into the Pale Silver → Graphite ramp for a metallic, premium feel */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/70 via-transparent to-secondary/60 mix-blend-overlay opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                   />
                 </div>
               ))}
