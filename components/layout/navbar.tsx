@@ -20,19 +20,22 @@ const Navbar = () => {
 
   return (
     <header className="fixed inset-x-0 top-4 z-50 px-4">
-      <div className="mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-3 shadow-lg backdrop-blur-xl">
-        <Link href="/" className="flex items-center">
+      <div className="mx-auto grid max-w-6xl grid-cols-[auto_1fr_auto] items-center gap-6 rounded-full border border-white/10 bg-white/5 px-8 py-4 shadow-lg backdrop-blur-xl">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/company-logo.png"
             alt="BKADS"
             width={139}
             height={48}
             priority
-            className="h-10 w-auto"
+            className="h-14 w-auto"
           />
+          <span className="text-2xl font-semibold tracking-tight text-foreground">
+            BKads
+          </span>
         </Link>
 
-        <nav className="hidden justify-center gap-8 text-sm font-medium text-foreground/80 md:flex">
+        <nav className="hidden justify-center gap-10 text-base font-medium text-foreground/80 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -49,13 +52,13 @@ const Navbar = () => {
             variant="default"
             nativeButton={false}
             render={<Link href="/contact" />}
-            className="group relative hidden h-10 w-fit cursor-pointer overflow-hidden rounded-full ps-5 pe-12 text-sm font-medium transition-all duration-500 hover:ps-12 hover:pe-5 md:flex"
+            className="group relative hidden h-12 w-fit cursor-pointer overflow-hidden rounded-full ps-6 pe-14 text-base font-medium transition-all duration-500 hover:ps-14 hover:pe-6 md:flex"
           >
             <span className="relative z-10 transition-all duration-500">
               Contact
             </span>
-            <div className="absolute right-1 flex size-8 items-center justify-center rounded-full bg-background text-foreground transition-all duration-500 group-hover:right-[calc(100%-36px)] group-hover:rotate-45">
-              <ArrowUpRight size={16} />
+            <div className="absolute right-1 flex size-10 items-center justify-center rounded-full bg-background text-foreground transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-45">
+              <ArrowUpRight size={18} />
             </div>
           </Button>
 
@@ -64,9 +67,9 @@ const Navbar = () => {
             aria-label="Open menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(true)}
-            className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground transition-colors hover:bg-white/10 md:hidden"
+            className="flex size-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground transition-colors hover:bg-white/10 md:hidden"
           >
-            <Menu size={18} />
+            <Menu size={20} />
           </button>
         </div>
       </div>
@@ -88,13 +91,18 @@ const Navbar = () => {
         aria-hidden={!isOpen}
       >
         <div className="flex items-center justify-between">
-          <Image
-            src="/company-logo.png"
-            alt="BKADS"
-            width={139}
-            height={48}
-            className="h-8 w-auto"
-          />
+          <div className="flex items-center gap-2">
+            <Image
+              src="/company-logo.png"
+              alt="BKADS"
+              width={139}
+              height={48}
+              className="h-10 w-auto"
+            />
+            <span className="text-xl font-semibold tracking-tight text-foreground">
+              BKads
+            </span>
+          </div>
           <button
             type="button"
             aria-label="Close menu"

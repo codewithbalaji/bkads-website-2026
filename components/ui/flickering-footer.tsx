@@ -381,7 +381,7 @@ export const FlickeringFooter = () => {
       <div className="w-full px-6 py-16 md:px-10 lg:px-16">
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div className="flex max-w-xs flex-col items-start gap-y-5">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/company-logo.png"
                 alt="BKADS"
@@ -389,6 +389,9 @@ export const FlickeringFooter = () => {
                 height={48}
                 className="h-10 w-auto"
               />
+              <span className="text-lg font-semibold tracking-tight text-foreground">
+                BKads
+              </span>
             </Link>
             <p className="font-medium tracking-tight text-muted-foreground">
               {siteConfig.tagline}
