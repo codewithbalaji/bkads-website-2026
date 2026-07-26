@@ -3,7 +3,7 @@ import Footer from "@/components/layout/footer";
 import { UnderConstruction } from "@/components/ui/under-construction";
 
 export const metadata: Metadata = {
-  title: "Contact | BKADS",
+  title: "Contact",
 };
 
 export default function ContactPage() {

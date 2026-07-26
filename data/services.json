@@ -3,36 +3,66 @@
     "id": "ai-automation",
     "title": "AI Automation",
     "description": "AI chatbots, RAG systems, AI assistants, document intelligence, and AI-powered workflow automation that reduce manual effort and speed up operations.",
-    "image": "/services/ai-automation.webp"
+    "image": "/services/ai-automation.webp",
+    "points": [
+      "AI chatbots & assistants",
+      "RAG & document intelligence",
+      "Workflow automation"
+    ]
   },
   {
     "id": "website-design",
     "title": "Website Design",
     "description": "Modern, responsive, brand-focused website design with clean UX/UI, landing pages, and conversion-oriented layouts.",
-    "image": "/services/web-design.webp"
+    "image": "/services/web-design.webp",
+    "points": [
+      "Responsive, brand-focused UI",
+      "Conversion-oriented layouts",
+      "Landing pages that perform"
+    ]
   },
   {
     "id": "website-development",
     "title": "Website Development",
     "description": "Custom websites and web platforms — business sites, portals, dashboards, and web applications built for performance and scale.",
-    "image": "/services/web-development.webp"
+    "image": "/services/web-development.webp",
+    "points": [
+      "Business sites & portals",
+      "Dashboards & web apps",
+      "Built for performance & scale"
+    ]
   },
   {
     "id": "app-development",
     "title": "App Development",
     "description": "Mobile and cross-platform app development for iOS and Android, from concept and design to launch and support.",
-    "image": "/services/app-development.webp"
+    "image": "/services/app-development.webp",
+    "points": [
+      "iOS & Android apps",
+      "Cross-platform builds",
+      "Concept to launch & support"
+    ]
   },
   {
     "id": "software-development",
     "title": "Software Development",
     "description": "Custom business software, internal tools, dashboards, portals, and integrations tailored to specific operational needs.",
-    "image": "/services/software-development.webp"
+    "image": "/services/software-development.webp",
+    "points": [
+      "Custom business software",
+      "Internal tools & dashboards",
+      "Tailored integrations"
+    ]
   },
   {
     "id": "seo-digital-marketing",
     "title": "SEO & Digital Marketing",
     "description": "Search engine optimization, digital marketing campaigns, content, and analytics that grow online visibility and generate leads.",
-    "image": "/services/seo-digital-marketing.webp"
+    "image": "/services/seo-digital-marketing.webp",
+    "points": [
+      "Search engine optimization",
+      "Campaigns & content",
+      "Analytics & lead generation"
+    ]
   }
 ]

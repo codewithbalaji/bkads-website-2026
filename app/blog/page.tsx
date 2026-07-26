@@ -3,7 +3,7 @@ import Footer from "@/components/layout/footer";
 import { UnderConstruction } from "@/components/ui/under-construction";
 
 export const metadata: Metadata = {
-  title: "Blog | BKADS",
+  title: "Blog",
 };
 
 export default function BlogPage() {
