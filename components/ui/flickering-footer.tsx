@@ -336,21 +336,21 @@ export const siteConfig = {
     {
       title: "Company",
       links: [
-        { id: 1, title: "Home", url: "#home" },
-        { id: 2, title: "Services", url: "#services" },
-        { id: 3, title: "Case Studies", url: "#case-studies" },
-        { id: 4, title: "About", url: "#about" },
-        { id: 5, title: "Blog", url: "#blog" },
+        { id: 1, title: "Home", url: "/" },
+        { id: 2, title: "Services", url: "/services" },
+        { id: 3, title: "Case Studies", url: "/case-studies" },
+        { id: 4, title: "About", url: "/about" },
+        { id: 5, title: "Blog", url: "/blog" },
       ],
     },
     {
       title: "Services",
       links: [
-        { id: 6, title: "AI Automation", url: "#services" },
-        { id: 7, title: "Website Design & Development", url: "#services" },
-        { id: 8, title: "App Development", url: "#services" },
-        { id: 9, title: "Software Development", url: "#services" },
-        { id: 10, title: "SEO & Digital Marketing", url: "#services" },
+        { id: 6, title: "AI Automation", url: "/services" },
+        { id: 7, title: "Website Design & Development", url: "/services" },
+        { id: 8, title: "App Development", url: "/services" },
+        { id: 9, title: "Software Development", url: "/services" },
+        { id: 10, title: "SEO & Digital Marketing", url: "/services" },
       ],
     },
   ],
@@ -366,8 +366,8 @@ export const siteConfig = {
     { id: "facebook", label: "Facebook", url: "#", icon: Icons.facebook },
   ],
   legalLinks: [
-    { id: "privacy", title: "Privacy Policy", url: "#" },
-    { id: "terms", title: "Terms of Service", url: "#" },
+    { id: "privacy", title: "Privacy Policy", url: "/privacy-policy" },
+    { id: "terms", title: "Terms of Service", url: "/terms-of-service" },
   ],
 };
 
