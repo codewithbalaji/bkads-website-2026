@@ -3,14 +3,7 @@
 import { Resend } from "resend";
 
 import { CONTACT } from "@/lib/site";
-
-export type ContactState = {
-  status: "idle" | "success" | "error";
-  errors?: Partial<Record<"name" | "email" | "message", string>>;
-  message?: string;
-};
-
-export const initialContactState: ContactState = { status: "idle" };
+import type { ContactState } from "@/app/contact/contact-state";
 
 // Deliberately loose but practical email shape check.
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

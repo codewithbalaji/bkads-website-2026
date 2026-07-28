@@ -3,11 +3,11 @@
 import { useActionState, useId } from "react";
 import { CheckCircle2 } from "lucide-react";
 
+import { submitContact } from "@/app/contact/actions";
 import {
   initialContactState,
-  submitContact,
   type ContactState,
-} from "@/app/contact/actions";
+} from "@/app/contact/contact-state";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
