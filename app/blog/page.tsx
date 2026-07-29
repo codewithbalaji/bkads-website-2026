@@ -19,11 +19,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: `${SITE_URL}/blog`,
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BKADS" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${TITLE} | BKADS`,
     description: DESCRIPTION,
+    images: ["/og-image.png"],
   },
 };
 

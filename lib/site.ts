@@ -1,6 +1,5 @@
 /**
  * Canonical site constants shared by metadata, sitemap, and robots.
- * NOTE: confirm the production domain before launch; assumed from contact@bkads.in.
  */
 export const SITE_URL = "https://www.bkads.in";
 

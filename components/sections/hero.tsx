@@ -28,7 +28,7 @@ export default function Hero() {
             nativeButton={false}
             render={<Link href="/contact" />}
           >
-            Book a Free Strategy Call
+            Get a Free Quote
           </Button>
           <Button
             variant="outline"

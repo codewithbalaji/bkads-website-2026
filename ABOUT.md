@@ -79,7 +79,6 @@ We treat every client's business challenge as our own and provide practical tech
 - Sri Sai Ram Crane Service
 - Harimidhu Organic
 - GM Marriage Caterers
-- Revive Wardrobe (Dubai)
 
 ## Revenue Model
 

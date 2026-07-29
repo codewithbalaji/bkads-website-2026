@@ -27,11 +27,13 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — Technology Partner for Modern Businesses`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Technology Partner for Modern Businesses`,
     description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
   },
 };
 
@@ -47,7 +49,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
