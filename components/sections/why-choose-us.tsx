@@ -58,8 +58,11 @@ const WhyChooseUs = () => {
 
         <StaggerReveal className="space-y-8">
           {REASONS.map((reason) => (
-            <RevealItem key={reason.id} className="flex gap-4">
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-card text-foreground">
+            <RevealItem
+              key={reason.id}
+              className="group -m-3 flex gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-card/50"
+            >
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-card text-foreground transition-transform duration-300 group-hover:scale-110 group-hover:border-foreground/30">
                 <reason.icon className="size-5" />
               </div>
               <div>

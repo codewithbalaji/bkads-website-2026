@@ -6,6 +6,7 @@ import CoreValues from "@/components/sections/core-values";
 import CtaBanner from "@/components/sections/cta-banner";
 import Founder from "@/components/sections/founder";
 import FutureVision from "@/components/sections/future-vision";
+import { Reveal } from "@/components/ui/reveal";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const TITLE = "About";
@@ -75,18 +76,20 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd) }}
       />
 
-      <section className="relative bg-background px-6 pt-40 pb-12 text-center md:pt-48">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          <span className="block text-3xl font-thin tracking-normal italic sm:text-4xl md:text-5xl">
-            Who We Are
-          </span>
-          Your technology partner for modern businesses
-        </h1>
-        <p className="mx-auto mt-6 max-w-prose text-base text-muted-foreground">
-          BKADS combines modern software development, AI expertise, and
-          business-focused problem solving to deliver practical solutions that
-          help companies achieve measurable results.
-        </p>
+      <section className="relative bg-background px-6 pt-40 pb-16 text-center md:pt-48">
+        <Reveal>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+            <span className="block text-3xl font-thin tracking-normal italic sm:text-4xl md:text-5xl">
+              Who We Are
+            </span>
+            Your technology partner
+          </h1>
+          <p className="mx-auto mt-6 max-w-prose text-base text-muted-foreground">
+            We build websites, apps, and AI-powered automation that help
+            businesses work smarter, save time, and get real, measurable
+            results.
+          </p>
+        </Reveal>
       </section>
 
       <AboutStory />

@@ -6,14 +6,23 @@ const Founder = () => {
     <section className="relative bg-background py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[minmax(0,320px)_1fr] md:gap-16">
         <Reveal>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl border border-border bg-card md:mx-0">
-            <Image
-              src="/bkads_founder_balaji_d.jpeg"
-              alt="Balaji D, founder of BKADS"
-              fill
-              sizes="(min-width: 768px) 320px, 80vw"
-              className="object-cover"
+          <div className="group relative mx-auto w-full max-w-xs md:mx-0">
+            <div
+              aria-hidden
+              className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent blur-2xl"
             />
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-border bg-card">
+              <Image
+                src="/bkads_founder_balaji_d.jpeg"
+                alt="Balaji D, founder of BKADS"
+                fill
+                sizes="(min-width: 768px) 320px, 80vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-foreground shadow-lg backdrop-blur-xl">
+                Founder · BKADS
+              </div>
+            </div>
           </div>
         </Reveal>
 
@@ -27,33 +36,19 @@ const Founder = () => {
 
           <div className="mt-6 max-w-prose space-y-4 text-sm text-muted-foreground">
             <p>
-              Balaji D. spent years on the inside of business IT — the
-              unglamorous side that never makes it onto a homepage:
-              spreadsheets doing the work of real software, processes held
-              together by habit rather than design, and capable teams quietly
-              slowed down by tools that never caught up with how they actually
-              work.
+              Balaji D. spent years working inside business IT, watching good
+              teams get slowed down by outdated tools and manual work. In
+              2025, he started BKADS in Chennai to fix that.
             </p>
             <p>
-              He kept seeing the same story everywhere he looked, so in 2025
-              he started BKADS in Chennai to do something about it: a
-              technology partner built on the belief that AI and automation
-              shouldn&apos;t be reserved for enterprises with big IT budgets —
-              that a manufacturer in Ambattur or a growing local business
-              deserves the same modern tooling as a Silicon Valley startup,
-              minus the jargon and the six-month sales cycle.
-            </p>
-            <p>
-              He&apos;s not chasing buzzwords. He&apos;s a working IT
-              professional with an unusually stubborn goal: help as many
-              businesses as possible trade manual, repetitive work for systems
-              that just work quietly in the background — so people can get
-              back to running their business instead of fighting their
-              software.
+              BKADS is built on one idea: every business — from a local
+              manufacturer in Ambattur to a growing company anywhere —
+              deserves the same modern technology as a big enterprise, without
+              the jargon or the long sales process.
             </p>
           </div>
 
-          <blockquote className="mt-8 border-l-2 border-border pl-6 text-base text-foreground italic">
+          <blockquote className="mt-8 rounded-xl border-l-2 border-border bg-card/50 p-6 text-base text-foreground italic">
             &quot;We help businesses improve efficiency and accelerate growth
             through AI automation, websites and apps, custom software, and
             digital marketing. My goal is for BKADS to become a trusted

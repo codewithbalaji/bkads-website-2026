@@ -42,10 +42,9 @@ const FutureVision = () => {
             From a services company to a products company
           </h2>
           <p className="mt-6 max-w-prose text-sm text-muted-foreground">
-            BKADS is evolving from a technology services company into a software
-            and AI solutions organization — developing industry-specific
-            products and scalable platforms alongside the services we deliver
-            today.
+            BKADS is growing from a technology services company into a
+            software and AI products company — building industry-specific
+            tools alongside the client work we deliver today.
           </p>
         </Reveal>
 
@@ -53,9 +52,9 @@ const FutureVision = () => {
           {DIRECTIONS.map((direction) => (
             <RevealItem
               key={direction.id}
-              className="rounded-2xl border border-border bg-card p-8"
+              className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/20 hover:bg-card/80 hover:shadow-xl hover:shadow-black/10"
             >
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground">
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground transition-transform duration-300 group-hover:scale-110 group-hover:border-foreground/30">
                 <direction.icon className="size-5" />
               </div>
               <h3 className="mt-6 text-lg font-semibold tracking-tight">
@@ -67,14 +66,6 @@ const FutureVision = () => {
             </RevealItem>
           ))}
         </StaggerReveal>
-
-        <Reveal delay={0.1}>
-          <p className="mt-14 max-w-prose text-sm text-muted-foreground">
-            Our long-term goal: build BKADS into a respected technology company
-            that delivers software, AI, automation, and business solutions —
-            while creating innovative products that serve businesses globally.
-          </p>
-        </Reveal>
       </div>
     </section>
   );

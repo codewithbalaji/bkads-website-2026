@@ -72,9 +72,9 @@ const CoreValues = () => {
           {VALUES.map((value) => (
             <RevealItem
               key={value.id}
-              className="rounded-2xl border border-border bg-card p-8"
+              className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/20 hover:bg-card/80 hover:shadow-xl hover:shadow-black/10"
             >
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground">
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground transition-transform duration-300 group-hover:scale-110 group-hover:border-foreground/30">
                 <value.icon className="size-5" />
               </div>
               <h3 className="mt-6 text-lg font-semibold tracking-tight">

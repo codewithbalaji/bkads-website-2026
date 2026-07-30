@@ -35,16 +35,11 @@ const AboutStory = () => {
             Technology, without unnecessary complexity
           </h2>
           <p className="mt-6 max-w-prose text-sm text-muted-foreground">
-            BKADS was founded on a simple belief: businesses should be able to
-            use modern technology without unnecessary complexity. By combining
-            software development, AI, automation, and practical business
-            understanding, we help organizations modernize operations, improve
-            efficiency, and prepare for the future.
-          </p>
-          <p className="mt-4 max-w-prose text-sm text-muted-foreground">
-            We treat every client&apos;s business challenge as our own — and
-            provide practical technology solutions with honesty, transparency,
-            and long-term support.
+            BKADS was founded on a simple idea: every business should be able
+            to use modern technology without the extra complexity. We combine
+            software development, AI, and automation to help companies work
+            smarter, save time, and grow — backed by honest advice and
+            long-term support.
           </p>
         </Reveal>
 
@@ -52,9 +47,9 @@ const AboutStory = () => {
           {PILLARS.map((pillar) => (
             <RevealItem
               key={pillar.id}
-              className="rounded-2xl border border-border bg-card p-8"
+              className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/20 hover:bg-card/80 hover:shadow-xl hover:shadow-black/10"
             >
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground">
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground transition-transform duration-300 group-hover:scale-110 group-hover:border-foreground/30">
                 <pillar.icon className="size-5" />
               </div>
               <h3 className="mt-6 text-lg font-semibold tracking-tight">
