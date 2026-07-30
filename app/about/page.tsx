@@ -4,8 +4,9 @@ import Footer from "@/components/layout/footer";
 import AboutStory from "@/components/sections/about-story";
 import CoreValues from "@/components/sections/core-values";
 import CtaBanner from "@/components/sections/cta-banner";
+import Founder from "@/components/sections/founder";
 import FutureVision from "@/components/sections/future-vision";
-import { CONTACT, SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const TITLE = "About";
 const DESCRIPTION =
@@ -37,21 +38,26 @@ export default function AboutPage() {
     name: `${SITE_NAME} — About`,
     description: DESCRIPTION,
     url: `${SITE_URL}/about`,
-    mainEntity: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-      email: CONTACT.email,
-      telephone: CONTACT.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Ambattur",
-        addressLocality: "Chennai",
-        addressRegion: "Tamil Nadu",
-        postalCode: "600053",
-        addressCountry: "IN",
-      },
-    },
+    mainEntity: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+  };
+
+  const founderJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/about#founder`,
+    name: "Balaji D",
+    jobTitle: "Founder",
+    image: `${SITE_URL}/bkads_founder_balaji_d.jpeg`,
+    worksFor: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+  };
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}/about` },
+    ],
   };
 
   return (
@@ -59,6 +65,14 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd) }}
       />
 
       <section className="relative bg-background px-6 pt-40 pb-12 text-center md:pt-48">
@@ -76,6 +90,7 @@ export default function AboutPage() {
       </section>
 
       <AboutStory />
+      <Founder />
       <CoreValues />
       <FutureVision />
       <CtaBanner />

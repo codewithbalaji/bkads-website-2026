@@ -12,6 +12,7 @@ import React, {
   useState,
 } from "react";
 import { cn } from "@/lib/utils";
+import { SOCIALS } from "@/lib/site";
 
 // Helper function to convert any CSS color to rgba
 export const getRGBA = (
@@ -361,9 +362,24 @@ export const siteConfig = {
     phoneHref: "+919384318546",
   },
   socials: [
-    { id: "linkedin", label: "LinkedIn", url: "#", icon: Icons.linkedin },
-    { id: "instagram", label: "Instagram", url: "#", icon: Icons.instagram },
-    { id: "facebook", label: "Facebook", url: "#", icon: Icons.facebook },
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      url: SOCIALS.find((s) => s.label === "LinkedIn")!.url,
+      icon: Icons.linkedin,
+    },
+    {
+      id: "instagram",
+      label: "Instagram",
+      url: SOCIALS.find((s) => s.label === "Instagram")!.url,
+      icon: Icons.instagram,
+    },
+    {
+      id: "facebook",
+      label: "Facebook",
+      url: SOCIALS.find((s) => s.label === "Facebook")!.url,
+      icon: Icons.facebook,
+    },
   ],
   legalLinks: [
     { id: "privacy", title: "Privacy Policy", url: "/privacy-policy" },

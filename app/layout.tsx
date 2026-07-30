@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/navbar";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIALS } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,6 +37,28 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${SITE_URL}/#organization`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/company-logo.png`,
+  image: `${SITE_URL}/og-image.png`,
+  email: CONTACT.email,
+  telephone: CONTACT.phone,
+  areaServed: "IN",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ambattur",
+    addressLocality: "Chennai",
+    addressRegion: "Tamil Nadu",
+    postalCode: "600053",
+    addressCountry: "IN",
+  },
+  sameAs: SOCIALS.map((social) => social.url),
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,6 +70,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
       </body>

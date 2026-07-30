@@ -1,23 +1,19 @@
-"use client";
-
 import Link from "next/link";
-import { GLSLHills } from "@/components/ui/glsl-hills";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
+import HeroBackground from "@/components/sections/hero-background";
 
 export default function Hero() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
-      <GLSLHills />
+      <HeroBackground />
       <div className="pointer-events-none absolute z-10 flex flex-col items-center space-y-10 px-6 text-center">
-        <Reveal>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block text-3xl font-thin tracking-normal italic sm:text-4xl md:text-5xl lg:text-6xl">
-              Your Technology Partner
-            </span>
-            For Modern Businesses
-          </h1>
-        </Reveal>
+        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="block text-3xl font-thin tracking-normal italic sm:text-4xl md:text-5xl lg:text-6xl">
+            Your Technology Partner
+          </span>
+          For Modern Businesses
+        </h1>
         <Reveal
           delay={0.15}
           className="pointer-events-auto flex flex-wrap items-center justify-center gap-4"

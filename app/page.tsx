@@ -9,7 +9,7 @@ import Services from "@/components/sections/services";
 import Testimonials from "@/components/sections/testimonials";
 import TrustBar from "@/components/sections/trust-bar";
 import WhyChooseUs from "@/components/sections/why-choose-us";
-import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const TITLE = `${SITE_NAME} — Technology Partner for Modern Businesses`;
 
@@ -39,21 +39,7 @@ export default function Home() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-      email: CONTACT.email,
-      telephone: CONTACT.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Ambattur",
-        addressLocality: "Chennai",
-        addressRegion: "Tamil Nadu",
-        postalCode: "600053",
-        addressCountry: "IN",
-      },
-    },
+    publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
   };
 
   return (

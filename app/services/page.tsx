@@ -40,7 +40,9 @@ export default function ServicesPage() {
       position: index + 1,
       item: {
         "@type": "Service",
+        "@id": `${SITE_URL}/services#${service.id}`,
         name: service.title,
+        serviceType: service.title,
         description: service.description,
         provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         areaServed: "IN",
@@ -48,11 +50,29 @@ export default function ServicesPage() {
     })),
   };
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${SITE_URL}/services`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <section className="relative bg-background px-6 pt-40 pb-12 text-center md:pt-48">

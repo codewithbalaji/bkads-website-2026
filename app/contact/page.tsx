@@ -37,17 +37,7 @@ export default function ContactPage() {
     url: `${SITE_URL}/contact`,
     mainEntity: {
       "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-      email: CONTACT.email,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Ambattur",
-        addressLocality: "Chennai",
-        addressRegion: "Tamil Nadu",
-        postalCode: "600053",
-        addressCountry: "IN",
-      },
+      "@id": `${SITE_URL}/#organization`,
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "sales",
@@ -59,11 +49,29 @@ export default function ContactPage() {
     },
   };
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: `${SITE_URL}/contact`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <section className="relative bg-background px-6 pt-40 pb-16 text-center md:pt-48">

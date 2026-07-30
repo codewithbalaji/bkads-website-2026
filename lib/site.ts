@@ -19,9 +19,9 @@ export const CONTACT = {
   phoneHref: "+919384318546",
 } as const;
 
-/** Social profiles. NOTE: URLs are placeholder '#' until the real handles are confirmed. */
+/** Social profiles. Single source of truth — also used in the footer and Organization JSON-LD `sameAs`. */
 export const SOCIALS = [
-  { label: "LinkedIn", url: "#" },
-  { label: "Instagram", url: "#" },
-  { label: "Facebook", url: "#" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/company/bkads" },
+  { label: "Instagram", url: "https://www.instagram.com/bkads_official" },
+  { label: "Facebook", url: "https://www.facebook.com/bkadsofficial" },
 ] as const;

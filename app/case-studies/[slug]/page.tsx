@@ -59,13 +59,13 @@ function ArticleJsonLd({ study, slug }: { study: CaseStudyMeta; slug: string }) 
     "@type": "Article",
     headline: study.title,
     description: study.summary,
-    image: study.image,
+    image: { "@type": "ImageObject", url: `${SITE_URL}${study.image}` },
     datePublished: study.date,
     dateModified: study.date,
-    author: { "@type": "Organization", name: "BKADS" },
-    publisher: { "@type": "Organization", name: "BKADS" },
+    author: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
+    publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    about: study.client,
+    about: { "@type": "Organization", name: study.client },
   };
   const breadcrumb = {
     "@context": "https://schema.org",

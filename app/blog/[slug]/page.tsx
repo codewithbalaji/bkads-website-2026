@@ -61,11 +61,14 @@ function BlogPostingJsonLd({ post }: { post: Post }) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.summary,
-    image: post.image,
+    image: { "@type": "ImageObject", url: post.image },
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Person", name: post.author },
-    publisher: { "@type": "Organization", name: "BKADS" },
+    author:
+      post.author === "Balaji"
+        ? { "@type": "Person", "@id": `${SITE_URL}/about#founder` }
+        : { "@type": "Person", name: post.author },
+    publisher: { "@type": "Organization", "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
   };
   const breadcrumb = {

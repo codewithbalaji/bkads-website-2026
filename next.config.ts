@@ -4,6 +4,7 @@ import createMDX from "@next/mdx";
 const nextConfig: NextConfig = {
   // Let .md / .mdx files act as pages and be imported as modules.
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {
@@ -12,6 +13,21 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
   },
 };
 
