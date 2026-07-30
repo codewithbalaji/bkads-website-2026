@@ -105,7 +105,7 @@ confirmed exception to that rule today).
 The palette is a single achromatic ramp — every token below has chroma 0; only lightness changes.
 
 ### Primary
-- **Pale Silver** (`oklch(0.922 0 0)`): the fill for primary/high-intent buttons (hero's "Book a Free Strategy Call", navbar's "Contact"). The brightest surface color in the system after Off-White — reserved for the one action per screen the visitor should take.
+- **Pale Silver** (`oklch(0.922 0 0)`): the fill for primary/high-intent buttons (hero's "Get a Free Quote", navbar's "Contact"). The brightest surface color in the system after Off-White — reserved for the one action per screen the visitor should take.
 
 ### Neutral
 - **Ink Black** (`oklch(0.145 0 0)`): page background. The base the entire system sits on.
@@ -170,7 +170,7 @@ Buttons and the navbar's glass pill are the only components with shipped, render
 ### Buttons
 - **Component:** `components/ui/button.tsx` — shadcn "base-nova" on `@base-ui/react`. Variants defined: `default | outline | secondary | ghost | destructive | link`. Sizes defined: `default | xs | sm | lg | icon | icon-*`. Only `default`, `outline`, and the `default`/`lg` sizes are actually used in shipped UI today; `secondary`/`ghost`/`destructive`/`link` and `xs`/`sm`/`icon*` exist on the primitive but are unused so far — don't assume they're battle-tested.
 - **Shape:** `rounded-xl` (0.875rem) at the `lg` size used for high-intent marketing CTAs; `rounded-lg` (0.625rem) at `default` size used for the navbar CTA.
-- **Primary** (`variant="default"`): background Pale Silver, text Surface Raised, hover fades to Pale Silver at 80% opacity (`bg-primary/80`). Used for the hero's "Book a Free Strategy Call" (size `lg`: `h-12`, `px-6`, `text-base`) and the navbar's "Contact" (size `default`: `h-8`, `px-5` override, `text-sm`).
+- **Primary** (`variant="default"`): background Pale Silver, text Surface Raised, hover fades to Pale Silver at 80% opacity (`bg-primary/80`). Used for the hero's "Get a Free Quote" (size `lg`: `h-12`, `px-6`, `text-base`) and the navbar's "Contact" (size `default`: `h-8`, `px-5` override, `text-sm`).
 - **Outline** (`variant="outline"`): background Ink Black, border Hairline White, hover background Graphite. Used for the hero's "Explore Services" (size `lg`).
 - **Focus/active:** focus-visible ring in Focus Ring color at 50% opacity plus a 3px border; active state nudges the button down 1px (`translate-y-px`) for a pressed feel.
 - **To render as a link:** use the `render` prop (base-ui's polymorphic API, not `asChild`) and set `nativeButton={false}` — otherwise base-ui warns that a non-`<button>` element was rendered while it still expected native button semantics.

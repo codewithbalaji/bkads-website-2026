@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 
 import { getAllCaseStudies } from "@/lib/case-studies";
 import { getAllPosts } from "@/lib/blog";
+import { getServiceIds } from "@/lib/services";
 import { SITE_URL } from "@/lib/site";
 
 /** Last commit date touching a source file, for sitemap `lastModified`. */
@@ -72,6 +73,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const serviceRoutes: MetadataRoute.Sitemap = getServiceIds().map((id) => ({
+    url: `${SITE_URL}/services/${id}`,
+    lastModified: lastModifiedOf("data/services-content.ts"),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
   const studies = await getAllCaseStudies();
   const caseStudyRoutes: MetadataRoute.Sitemap = studies.map((study) => ({
     url: `${SITE_URL}/case-studies/${study.slug}`,
@@ -88,5 +96,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...caseStudyRoutes, ...blogRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...caseStudyRoutes, ...blogRoutes];
 }

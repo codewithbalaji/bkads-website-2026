@@ -25,7 +25,7 @@ const CtaBanner = () => {
               nativeButton={false}
               render={<Link href="/contact" />}
             >
-              Book Your Free Strategy Call
+              Get a Free Quote
             </Button>
           </div>
         </div>

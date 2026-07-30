@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import services from "@/data/services.json";
+import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 
 type Service = {
@@ -61,6 +63,16 @@ const ServiceDetails = () => {
                       ))}
                     </ul>
                   )}
+
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="mt-8"
+                    nativeButton={false}
+                    render={<Link href={`/services/${service.id}`} />}
+                  >
+                    Learn more
+                  </Button>
                 </div>
               </div>
             </Reveal>

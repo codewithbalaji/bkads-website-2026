@@ -40,7 +40,8 @@ export default function ServicesPage() {
       position: index + 1,
       item: {
         "@type": "Service",
-        "@id": `${SITE_URL}/services#${service.id}`,
+        "@id": `${SITE_URL}/services/${service.id}#service`,
+        url: `${SITE_URL}/services/${service.id}`,
         name: service.title,
         serviceType: service.title,
         description: service.description,
